@@ -408,6 +408,313 @@
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
         }
 
+        
+        .instagram-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-image {
+            position: relative;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .sidebar {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #dbdbdb;
+        }
+
+        .post-header {
+            padding: 16px;
+            border-bottom: 1px solid #efefef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile-pic {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-pic-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-pic-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .username {
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .verified {
+            color: #0095f6;
+            font-size: 12px;
+        }
+
+        .comments-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            max-height: 500px;
+        }
+
+        .comment {
+            margin-bottom: 16px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .comment-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-username {
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 6px;
+        }
+
+        .comment-text {
+            font-size: 14px;
+            line-height: 18px;
+            color: #262626;
+        }
+
+        .comment-meta {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .comment-meta span {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .comment-meta span:hover {
+            color: #262626;
+        }
+
+        .post-actions {
+            padding: 12px 16px;
+            border-top: 1px solid #efefef;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: #262626;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            padding: 0;
+        }
+
+        .action-btn:hover {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+
+        .action-btn.liked {
+            color: #ed4956;
+            animation: likeAnimation 0.4s ease;
+        }
+
+        @keyframes likeAnimation {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        .likes-count {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .post-time {
+            font-size: 10px;
+            color: #8e8e8e;
+            text-transform: uppercase;
+        }
+
+        .add-comment {
+            padding: 16px;
+            border-top: 1px solid #efefef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .comment-input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #262626;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .comment-input::placeholder {
+            color: #8e8e8e;
+        }
+
+        .post-btn {
+            background: none;
+            border: none;
+            color: #0095f6;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+
+        .post-btn.active {
+            opacity: 1;
+        }
+
+        .post-btn.active:hover {
+            color: #00376b;
+        }
+
+        @media (max-width: 992px) {
+            .instagram-container {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+
+            .post-image {
+                max-height: 600px;
+            }
+
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #dbdbdb;
+            }
+
+            .comments-section {
+                max-height: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 0;
+            }
+
+            .instagram-container {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .post-image {
+                max-height: 500px;
+            }
+
+            .comments-section {
+                max-height: 300px;
+            }
+        }
+
+        /* Scrollbar customizada */
+        .comments-section::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .comments-section::-webkit-scrollbar-track {
+            background: #fafafa;
+        }
+
+        .comments-section::-webkit-scrollbar-thumb {
+            background: #dbdbdb;
+            border-radius: 4px;
+        }
+
+        .comments-section::-webkit-scrollbar-thumb:hover {
+            background: #c7c7c7;
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: flex;
@@ -550,20 +857,136 @@
             </div>
         </section>
 
-        <section class="slide">
-            <span class="slide-number">SLIDE 8</span>
-            <h2>📰 Caso Real</h2>
-            <div class="case-study">
-                <h3>⚽ Ataque Racista contra Vinícius Jr.</h3>
-                <p class="content-text">O jogador brasileiro foi vítima de ataques racistas em estádios da Espanha, gerando repercussão mundial.</p>
-                <p class="content-text"><strong>Opinião do grupo:</strong> Este caso mostra como o racismo ainda é naturalizado e como as redes amplificam esse tipo de discurso, muitas vezes com impunidade.</p>
+        <div class="instagram-container" style="margin-bottom: 5px ;">
+        <div class="post-image">
+            <img src="../gattisite/midia/POST.png" alt="São Paulo FC - Bobadilla">
+        </div>
+
+        <div class="sidebar">
+            <div class="post-header">
+                <div class="profile-pic">
+                    <div class="profile-pic-inner">
+                        <img src="../gattisite/midia/PERFIL.png" alt="SPFC">
+                    </div>
+                </div>
+                <div>
+                    <div class="username">
+                        saopaulofc
+                        <span class="verified">✓</span>
+                    </div>
+                </div>
             </div>
-            <div class="tags">
-                <span class="tag">Racismo</span>
-                <span class="tag">Esporte</span>
-                <span class="tag">Impunidade</span>
+
+            <div class="comments-section" id="commentsSection">
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar">SP</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">saopaulofc</span>
+                                <span class="verified">✓</span>
+                            </div>
+                            <p class="comment-text">⚽ O autor do segundo gol tricolor!<br><br>🎨 Miguel Schincariol / São Paulo FC<br><br>#VamosSãoPaulo</p>
+                            <div class="comment-meta">
+                                <span>4 h</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">CT</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">carteiradetrabalhoofficiaI</span>
+                            </div>
+                            <p class="comment-text">Boa tarde pessoal, passando pra lembrar vcs que amanhã voltamos à programação normal 🙃</p>
+                            <div class="comment-meta">
+                                <span>4 h</span>
+                                <span>36 curtidas</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">JM</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">juanmanuelgimenez1899</span>
+                            </div>
+                            <p class="comment-text">Saludos hermanos vamos arriba 💪🏻❤️❤️❤️</p>
+                            <div class="comment-meta">
+                                <span>4 h</span>
+                                <span>5 curtidas</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140)">AB</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">adrielebonfim</span>
+                            </div>
+                            <p class="comment-text">Tem parabéns não. Vence umas 5 seguidas que a gente até canta o parabéns</p>
+                            <div class="comment-meta">
+                                <span>4 h</span>
+                                <span>55 curtidas</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">JP</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">julin.pramos</span>
+                            </div>
+                            <p class="comment-text">Parabenizar o Rogério Ceni 👏</p>
+                            <div class="comment-meta">
+                                <span>4 h</span>
+                                <span>21 curtidas</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <button class="action-btn" id="likeBtn" aria-label="Curtir">♡</button>
+                    <button class="action-btn" aria-label="Comentar">💬</button>
+                    <button class="action-btn" aria-label="Compartilhar">✈</button>
+                </div>
+                <div class="likes-count" id="likesCount">12.487 curtidas</div>
+                <div class="post-time">há 4 horas</div>
+            </div>
+
+            <div class="add-comment">
+                <input 
+                    type="text" 
+                    class="comment-input" 
+                    id="commentInput"
+                    placeholder="Adicione um comentário..."
+                    aria-label="Adicione um comentário"
+                >
+                <button class="post-btn" id="postBtn">Publicar</button>
+            </div>
+        </div>
+    </div>
+
 
         <section class="slide">
             <span class="slide-number">SLIDE 9</span>
@@ -600,6 +1023,91 @@
     <div class="scroll-top" id="scrollTop">↑</div>
 
     <script>
+
+         // Sistema de likes
+        let likesCount = 12487;
+        let isLiked = false;
+        const likeBtn = document.getElementById('likeBtn');
+        const likesCountEl = document.getElementById('likesCount');
+
+        likeBtn.addEventListener('click', function() {
+            isLiked = !isLiked;
+            
+            if (isLiked) {
+                likesCount++;
+                likeBtn.textContent = '❤';
+                likeBtn.classList.add('liked');
+            } else {
+                likesCount--;
+                likeBtn.textContent = '♡';
+                likeBtn.classList.remove('liked');
+            }
+            
+            likesCountEl.textContent = `${likesCount.toLocaleString('pt-BR')} curtidas`;
+        });
+
+        // Sistema de comentários
+        const commentInput = document.getElementById('commentInput');
+        const postBtn = document.getElementById('postBtn');
+        const commentsSection = document.getElementById('commentsSection');
+
+        commentInput.addEventListener('input', function() {
+            if (this.value.trim()) {
+                postBtn.classList.add('active');
+            } else {
+                postBtn.classList.remove('active');
+            }
+        });
+
+        postBtn.addEventListener('click', function() {
+            const commentText = commentInput.value.trim();
+            
+            if (commentText) {
+                addComment(commentText);
+                commentInput.value = '';
+                postBtn.classList.remove('active');
+            }
+        });
+
+        commentInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && commentInput.value.trim()) {
+                postBtn.click();
+            }
+        });
+
+        function addComment(text) {
+            const colors = [
+                'linear-gradient(135deg, #667eea, #764ba2)',
+                'linear-gradient(135deg, #f093fb, #f5576c)',
+                'linear-gradient(135deg, #4facfe, #00f2fe)',
+                'linear-gradient(135deg, #43e97b, #38f9d7)',
+                'linear-gradient(135deg, #fa709a, #fee140)'
+            ];
+            
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const initials = 'VC';
+            
+            const commentHTML = `
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: ${randomColor}">${initials}</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">vocÊ</span>
+                            </div>
+                            <p class="comment-text">${text}</p>
+                            <div class="comment-meta">
+                                <span>agora</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            commentsSection.insertAdjacentHTML('beforeend', commentHTML);
+            commentsSection.scrollTop = commentsSection.scrollHeight;
+        }
         // Animação de partículas no header
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 20; i++) {
