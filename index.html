@@ -504,6 +504,573 @@
             animation: fadeIn 0.3s ease;
         }
 
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-container {
+            
+            width: 320px;
+            height: 640px;
+            background: #2f2f2f;
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+            margin-left: 350px;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #075e54 0%, #25d366 100%);
+            padding: 13px 14px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 25px 25px 0 0;
+            box-shadow: 0 2px 8px rgba(7,94,84,0.08);
+        }
+
+        .wa-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wa-profile-pic {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #25d366;
+            box-shadow: 0 1px 4px rgba(7,94,84,0.15);
+        }
+
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .enunciado {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .enunciado h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .enunciado p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .pergunta {
+            font-weight: 600;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .alternativas {
+            margin: 30px 0;
+        }
+
+        .alternativa {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .alternativa:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .alternativa input[type="radio"] {
+            display: none;
+        }
+
+        .alternativa label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .letra {
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .texto-alternativa {
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            flex: 1;
+        }
+
+        .alternativa.correta {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .alternativa.incorreta {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .alternativa.correta .letra {
+            background: #28a745;
+        }
+
+        .alternativa.incorreta .letra {
+            background: #dc3545;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-verificar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-verificar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-verificar:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-resolver {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-resolver:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-reiniciar {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-reiniciar:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+        }
+
+        .resultado {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            display: none;
+        }
+
+        .resultado.acerto {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #28a745;
+        }
+
+        .resultado.erro {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #dc3545;
+        }
+
+        .resolucao {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .resolucao h3 {
+            color: #1976D2;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .resolucao p {
+            color: #333;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .resolucao ul {
+            margin-left: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .resolucao li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+        }
+
+        .wa-profile-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .wa-profile-name {
+            font-size: 1.08em;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.1;
+        }
+
+        .wa-profile-status {
+            font-size: 0.85em;
+            color: #e0f2f1;
+            font-weight: 400;
+        }
+
+        .wa-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 1px 4px rgba(7,94,84,0.15);
+        }
+
+        .wa-icon img {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+
+        .chat-body {
+            padding: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+            background: #f5f5f5;
+        }
+
+        .message {
+            background: #e3f2fd;
+            padding: 12px 16px;
+            border-radius: 18px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            color: #333;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInMessage 0.5s forwards;
+        }
+
+        @keyframes fadeInMessage {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #999;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hate-popup {
+            position: fixed;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 10px 40px rgba(255, 65, 108, 0.6);
+            z-index: 1000;
+            opacity: 0;
+            transform: scale(0.5) rotate(-10deg);
+            pointer-events: none;
+        }
+
+        .hate-popup.show {
+            animation: popupAnimation 7s forwards;
+        }
+
+        @keyframes popupAnimation {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotate(-10deg);
+            }
+            10% {
+                opacity: 1;
+                transform: scale(1.1) rotate(5deg);
+            }
+            20% {
+                transform: scale(1) rotate(-2deg);
+            }
+            80% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.8) rotate(5deg);
+            }
+        }
+
+        .content-section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            background: #0f0f0f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #434343 0%, #000000 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .impact-text {
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 60px auto;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .phone-container {
+                transform: scale(0.8);
+            }
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -542,7 +1109,7 @@
         .comment-username {
             font-weight: 600;
             font-size: 14px;
-            margin-right: 6px;
+            margin-right: 12px;
         }
 
         .comment-text {
@@ -767,6 +1334,272 @@
                 padding: 1.5rem;
             }
         }
+
+        .citation-container {
+            max-width: 1100px;
+            width: 100%;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .citation-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .citation-header::before {
+            content: '"';
+            position: absolute;
+            font-size: 200px;
+            color: rgba(255, 255, 255, 0.1);
+            top: -40px;
+            left: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .citation-header h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .citation-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+            padding: 50px;
+        }
+
+        .book-cover-wrapper {
+            position: relative;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .book-cover {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            aspect-ratio: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .book-cover:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-cover-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .book-cover-content .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .book-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .book-author {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .book-author::before {
+            content: "por ";
+            font-style: normal;
+            color: #718096;
+            font-size: 1rem;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 30px 0;
+            border-radius: 2px;
+        }
+
+        .book-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .book-meta {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .meta-item:hover {
+            background: #edf2f7;
+            transform: translateY(-2px);
+        }
+
+        .meta-icon {
+            font-size: 1.5rem;
+        }
+
+        .meta-text {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .citation-footer {
+            background: #f7fafc;
+            padding: 30px 50px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .citation-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #2d3748;
+            font-style: italic;
+            position: relative;
+            padding-left: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .citation-text::before {
+            content: '"';
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 3rem;
+            color: #667eea;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 992px) {
+            .citation-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 30px;
+            }
+
+            .book-cover-wrapper {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .book-title {
+                font-size: 1.7rem;
+            }
+
+            .citation-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .citation-header {
+                padding: 30px 20px;
+            }
+
+            .citation-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .citation-content {
+                padding: 30px 20px;
+            }
+
+            .book-title {
+                font-size: 1.4rem;
+            }
+
+            .book-author {
+                font-size: 1.1rem;
+            }
+
+            .book-description {
+                font-size: 1rem;
+            }
+
+            .citation-footer {
+                padding: 20px;
+            }
+
+            .citation-text {
+                font-size: 1rem;
+            }
+
+            .book-meta {
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -818,6 +1651,35 @@
             <p class="content-text">A fala mostra que <span class="highlight">o problema não é novo</span>. A diferença é que agora ele está mais visível nas redes, alcançando milhões de pessoas em segundos e causando danos irreparáveis.</p>
         </section>
 
+
+        <section class="slide">
+            <div class="phone-container">
+                <div class="phone-screen">
+                    <div class="chat-header">
+                        <div class="wa-profile">
+                        <img class="wa-profile-pic" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Perfil" />
+                        <div class="wa-profile-info">
+                            <span class="wa-profile-name">Maria Oliveira</span>
+                            <span class="wa-profile-status">online</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <button id="startChatBtn" style="width:100%;padding:22px 0 28px 0;font-size:1.1em;background:linear-gradient(135deg,#25d366 0%,#075e54 100%);color:#fff;border:none;border-radius:0 0 40px 40px;cursor:pointer;font-weight:bold;box-shadow:0 2px 8px rgba(7,94,84,0.08);transition:background 0.3s;position:relative;bottom:0px;">Iniciar Conversa</button>
+                </div>
+            </div>
+        </div>
+        </section>
+    
+    
+    
+
         <section class="slide" id="direitos">
             <span class="slide-number">SLIDE 4</span>
             <h2>⚖️ Direito Negligenciado</h2>
@@ -831,13 +1693,54 @@
             </div>
         </section>
 
-        <section class="slide" id="exemplo">
-            <span class="slide-number">SLIDE 5</span>
-            <h2>📚 Exemplo Literário</h2>
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">O Ódio que Você Semeia — Angie Thomas</h3>
-            <p class="content-text">A história mostra como o <span class="highlight">preconceito racial e o ódio policial</span> refletem uma sociedade que ainda discrimina. Assim como nas redes, a violência verbal e simbólica se torna real.</p>
-            <p class="content-text">O livro nos lembra que o discurso de ódio não fica apenas nas palavras — ele tem consequências físicas e emocionais devastadoras.</p>
-        </section>
+        <div class="citation-container" style="margin-bottom: 50px;">
+        <div class="citation-content">
+            <div class="book-cover-wrapper">
+                <div class="book-cover">
+                    <div class="book-cover-content">
+                        <img src="../gattisite/midia/CAPA.png" alt="Capa do Livro" style="width:100%; height:auto; border-radius:8px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-details">
+                <h2 class="book-title">Misoginia na Internet – Uma Década de Disputas por Direitos</h2>
+                <p class="book-author">Juliana Pacetta Ruiz e Graciela Natansohn</p>
+
+                <div class="divider"></div>
+
+                <p class="book-description">
+                    Esta obra apresenta uma análise profunda e necessária sobre as manifestações de misoginia no ambiente digital ao longo de dez anos. As autoras exploram como o ódio contra mulheres se manifesta nas plataformas online, desde assédio e cyberbullying até campanhas organizadas de difamação. O livro documenta lutas históricas por direitos digitais e examina como a violência de gênero se transformou e intensificou na era das redes sociais, oferecendo reflexões cruciais sobre feminismo digital, ativismo online e a construção de espaços mais seguros na internet.
+                </p>
+
+                <div class="book-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📚</span>
+                        <div class="meta-text">
+                            <div class="meta-label">Gênero</div>
+                            Estudos de Gênero / Tecnologia
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="meta-item">
+                        <span class="meta-icon">🌐</span>
+                        <div class="meta-text">
+                            <div class="meta-label">Tema</div>
+                            Violência Digital
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="citation-footer">
+            <div class="citation-text">
+                A internet não é um espaço neutro. Compreender as dinâmicas de poder e violência que atravessam o digital é fundamental para construirmos uma sociedade mais justa e igualitária, tanto online quanto offline.
+            </div>
+        </div>
+    </div>
 
         <section class="slide">
             <span class="slide-number">SLIDE 6</span>
@@ -852,6 +1755,12 @@
             <p class="content-text">A <strong>liberdade de expressão</strong> é o direito de se manifestar.</p>
             <p class="content-text">Mas ela tem limite: <span class="highlight">termina quando fere os direitos de outra pessoa</span>.</p>
             <p class="content-text">O discurso de ódio ultrapassa esse limite, porque ofende e exclui.</p>
+            <div>
+                <video controls style="width: 100%; margin-top: 1rem;">
+                    <source src="midia/odio.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
             <div class="quote">
                 <p>Opinar é diferente de humilhar. A liberdade não pode ser usada como desculpa para o preconceito.</p>
             </div>
@@ -879,6 +1788,22 @@
 
         
 
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">MR</div>
+                        <div class="comment-content">
+                            <div>
+                                <span class="comment-username">lucas_felipe</span>
+                            </div>
+                            <p class="comment-text">Volta pro zoológico 🐒🐒🐒 Não aguento mais ver esse [CENSURADO] no meu time</p>
+                            <div class="comment-meta">
+                                <span>2 h</span>
+                                <span>12 curtidas</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="comment">
                     <div class="comment-header">
                         <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">MR</div>
@@ -991,6 +1916,99 @@
             </div>
         </section>
 
+        <div class="container">
+        <div class="header">
+            <h1>ENEM 2013 — Segundo Dia (Caderno Azul)</h1>
+            <p>Questão 133 — Linguagens, Códigos e suas Tecnologias</p>
+        </div>
+
+        <div class="content">
+            <div class="enunciado">
+                <h2>Enunciado</h2>
+                <p><strong>"O que a internet esconde de você"</strong></p>
+                <p>Sites de busca manipulam resultados. Redes sociais decidem quem vai ser seu amigo — e descartam as pessoas sem avisar. E, para cada site que você pode acessar, há 400 outros invisíveis. Prepare-se para conhecer o lado oculto da internet.</p>
+                <p class="pergunta">Analisando-se as informações verbais e a imagem associada a uma cabeça humana, compreende-se que a venda …</p>
+            </div>
+
+            <div class="alternativas" id="alternativas">
+                <div class="alternativa" onclick="selecionarAlternativa(1)">
+                    <input type="radio" name="resposta" id="alt1" value="1">
+                    <label for="alt1">
+                        <span class="letra">A</span>
+                        <span class="texto-alternativa">representa a amplitude de informações que compõem a internet, às quais temos acesso em redes sociais e sites de busca.</span>
+                    </label>
+                </div>
+
+                <div class="alternativa" onclick="selecionarAlternativa(2)">
+                    <input type="radio" name="resposta" id="alt2" value="2">
+                    <label for="alt2">
+                        <span class="letra">B</span>
+                        <span class="texto-alternativa">faz uma denúncia quanto às informações que são omitidas dos usuários da rede, sendo empregada no sentido conotativo.</span>
+                    </label>
+                </div>
+
+                <div class="alternativa" onclick="selecionarAlternativa(3)">
+                    <input type="radio" name="resposta" id="alt3" value="3">
+                    <label for="alt3">
+                        <span class="letra">C</span>
+                        <span class="texto-alternativa">diz respeito a um buraco negro digital, onde estão escondidas as informações buscadas pelo usuário nos sites que acessa.</span>
+                    </label>
+                </div>
+
+                <div class="alternativa" onclick="selecionarAlternativa(4)">
+                    <input type="radio" name="resposta" id="alt4" value="4">
+                    <label for="alt4">
+                        <span class="letra">D</span>
+                        <span class="texto-alternativa">está associada a um conjunto de restrições sociais presentes na vida daqueles que estão sempre conectados à internet.</span>
+                    </label>
+                </div>
+
+                <div class="alternativa" onclick="selecionarAlternativa(5)">
+                    <input type="radio" name="resposta" id="alt5" value="5">
+                    <label for="alt5">
+                        <span class="letra">E</span>
+                        <span class="texto-alternativa">remete às bases de dados da web, protegidas por senhas ou assinaturas e às quais o navegador não tem acesso.</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <button class="btn btn-verificar" id="btnVerificar" onclick="verificarResposta()" disabled>Verificar Resposta</button>
+                <button class="btn btn-resolver" onclick="mostrarResolucao()">Ver Resolução</button>
+                <button class="btn btn-reiniciar" onclick="reiniciar()">Reiniciar</button>
+            </div>
+
+            <div class="resultado" id="resultado"></div>
+
+            <div class="resolucao" id="resolucao">
+                <h3>📝 Resolução Comentada</h3>
+                <p><strong>Gabarito: Alternativa B</strong></p>
+                
+                <p>Esta questão trabalha com a interpretação de textos multimodais (verbal + visual) e exige que o candidato compreenda o uso de <strong>linguagem conotativa</strong> e elementos simbólicos.</p>
+                
+                <p><strong>Análise do texto:</strong></p>
+                <ul>
+                    <li>O título "O que a internet esconde de você" já sugere ocultamento de informações</li>
+                    <li>O texto menciona manipulação de resultados, decisões algorítmicas sem transparência e sites invisíveis</li>
+                    <li>A imagem de uma venda nos olhos reforça simbolicamente a ideia de "não enxergar" ou "estar impedido de ver"</li>
+                </ul>
+                
+                <p><strong>Por que a alternativa B está correta:</strong></p>
+                <p>A venda representa, de forma <strong>conotativa</strong> (simbólica, figurada), a denúncia de que usuários não têm acesso completo às informações na internet. Há uma crítica à falta de transparência sobre como sites manipulam dados e restringem conteúdos.</p>
+                
+                <p><strong>Por que as outras alternativas estão incorretas:</strong></p>
+                <ul>
+                    <li><strong>A:</strong> Contradiz o texto. A venda sugere limitação, não amplitude de acesso</li>
+                    <li><strong>C:</strong> "Buraco negro digital" não é mencionado no texto e distorce a mensagem</li>
+                    <li><strong>D:</strong> O foco não são restrições sociais dos usuários conectados, mas sim informações omitidas pelos sites</li>
+                    <li><strong>E:</strong> Embora bases protegidas sejam mencionadas, a venda simboliza mais a manipulação e ocultação ativa do que apenas proteção por senhas</li>
+                </ul>
+                
+                <p><strong>Habilidade avaliada:</strong> Compreender textos multimodais e reconhecer o uso de linguagem conotativa em contextos críticos e reflexivos.</p>
+            </div>
+        </div>
+        </div>
+
         <section class="slide conclusion" id="conclusao">
             <span class="slide-number" style="background: white; color: var(--primary);">SLIDE 11</span>
             <h2>💭 Conclusão e Reflexão Final</h2>
@@ -1001,7 +2019,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Seminário - Discurso de Ódio nas Redes | Desenvolvido para educação</p>
+        <p>&copy; 2025 Seminário - Discurso de Ódio nas Redes | Desenvolvido para educação</p>
     </footer>
 
     <div class="scroll-top" id="scrollTop">↑</div>
@@ -1009,7 +2027,7 @@
     <script>
 
          // Sistema de likes
-        let likesCount = 12487;
+        let likesCount = 89.487;
         let isLiked = false;
         const likeBtn = document.getElementById('likeBtn');
         const likesCountEl = document.getElementById('likesCount');
@@ -1201,6 +2219,240 @@
                 }
             }, 300);
         });
+
+         const messages = [
+            "Oii! como vc está?",
+            "Hoje participei de um culto maravilhoso na minha igreja 🙏",
+            "Foi muito especial, renovei minhas energias espirituais ✨"
+        ];
+
+        const hateComments = [
+            "Sua crença é ridícula!",
+            "Volte para a cozinha!",
+            "Ninguém pediu sua opinião",
+            "Você não deveria estar aqui",
+            "Isso é coisa de pessoas fracas",
+            "Sua religião é mentira",
+            "Mulher tem que ficar quieta",
+            "Que absurdo acreditar nisso",
+            "Você é patética",
+            "Pare de forçar sua religião",
+            "Ninguém se importa com o que você pensa",
+            "Isso é lavagem cerebral",
+            "Sua crença é ridícula!",
+            "Volte para a cozinha!",
+            "Ninguém pediu sua opinião",
+            "Você não deveria estar aqui",
+            "Isso é coisa de pessoas fracas",
+            "Sua religião é mentira",
+        ];
+
+        let messageIndex = 0;
+        const chatBody = document.getElementById('chatBody');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        function addMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            messageDiv.textContent = text;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function showTyping() {
+            // Move o typing-indicator para o final do chat
+            chatBody.appendChild(typingIndicator);
+            typingIndicator.style.display = 'block';
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function hideTyping() {
+            typingIndicator.style.display = 'none';
+        }
+
+        function createHatePopup(text) {
+            const popup = document.createElement('div');
+            popup.className = 'hate-popup';
+            popup.textContent = text;
+           
+            const x = Math.random() * (window.innerWidth - 300);
+            const y = Math.random() * (window.innerHeight - 100);
+           
+            popup.style.left = x + 'px';
+            popup.style.top = y + 'px';
+           
+            document.body.appendChild(popup);
+           
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 100);
+           
+            // Remover o setTimeout que remove o popup
+            // Eles permanecerão na tela
+        }
+
+        function startAnimation() {
+            if (messageIndex < messages.length) {
+                showTyping();
+               
+                setTimeout(() => {
+                    hideTyping();
+                    addMessage(messages[messageIndex]);
+                    messageIndex++;
+                   
+                    setTimeout(startAnimation, 1500);
+                }, 2000);
+            } else {
+                setTimeout(triggerHateStorm, 1000);
+            }
+        }
+
+        function triggerHateStorm() {
+            let delay = 0;
+            hateComments.forEach((comment, index) => {
+                setTimeout(() => {
+                    createHatePopup(comment);
+                }, delay);
+                delay += 400;
+            });
+        }
+
+        // Iniciar conversa apenas ao clicar no botão
+        const startChatBtn = document.getElementById('startChatBtn');
+        if (startChatBtn) {
+            startChatBtn.addEventListener('click', function() {
+                startChatBtn.style.display = 'none';
+                startAnimation();
+            });
+        }
+     let respostaSelecionada = null;
+        let respondido = false;
+
+        function selecionarAlternativa(numero) {
+            if (respondido) return;
+            
+            respostaSelecionada = numero;
+            
+            document.querySelectorAll('.alternativa').forEach(alt => {
+                alt.style.background = '#fff';
+                alt.style.borderColor = '#e0e0e0';
+            });
+            
+            const altSelecionada = document.querySelector(`#alt${numero}`).parentElement;
+            altSelecionada.style.background = '#f0f4ff';
+            altSelecionada.style.borderColor = '#667eea';
+            
+            document.getElementById('btnVerificar').disabled = false;
+        }
+
+        function verificarResposta() {
+            if (!respostaSelecionada || respondido) return;
+            
+            respondido = true;
+            const gabarito = 2;
+            const resultado = document.getElementById('resultado');
+            
+            document.querySelectorAll('.alternativa').forEach((alt, index) => {
+                if (index + 1 === gabarito) {
+                    alt.classList.add('correta');
+                } else if (index + 1 === respostaSelecionada && respostaSelecionada !== gabarito) {
+                    alt.classList.add('incorreta');
+                }
+                alt.style.pointerEvents = 'none';
+            });
+            
+            if (respostaSelecionada === gabarito) {
+                resultado.className = 'resultado acerto';
+                resultado.innerHTML = '🎉 Parabéns! Resposta correta!';
+            } else {
+                resultado.className = 'resultado erro';
+                resultado.innerHTML = `❌ Resposta incorreta. A resposta correta é a alternativa B.`;
+            }
+            
+            resultado.style.display = 'block';
+            document.getElementById('btnVerificar').disabled = true;
+        }
+
+        function mostrarResolucao() {
+            const resolucao = document.getElementById('resolucao');
+            if (resolucao.style.display === 'none' || resolucao.style.display === '') {
+                resolucao.style.display = 'block';
+                resolucao.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                resolucao.style.display = 'none';
+            }
+        }
+
+        function reiniciar() {
+            respondido = false;
+            respostaSelecionada = null;
+            
+            document.querySelectorAll('.alternativa').forEach(alt => {
+                alt.classList.remove('correta', 'incorreta');
+                alt.style.background = '#fff';
+                alt.style.borderColor = '#e0e0e0';
+                alt.style.pointerEvents = 'auto';
+            });
+            
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+            
+            document.getElementById('resultado').style.display = 'none';
+            document.getElementById('resolucao').style.display = 'none';
+            document.getElementById('btnVerificar').disabled = true;
+        }
+
+         // Animação de entrada suave nos elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Efeito parallax suave no scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const bookCover = document.querySelector('.book-cover-wrapper');
+            
+            if (bookCover) {
+                const speed = 0.3;
+                bookCover.style.transform = `translateY(${scrolled * speed}px)`;
+            }
+        });
+
+        // Adiciona interatividade aos meta-items
+        const metaItems = document.querySelectorAll('.meta-item');
+        metaItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.05)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Efeito de digitação no título
+        const title = document.querySelector('.citation-header h1');
+        const originalText = title.textContent;
+        title.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                title.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(typeWriter, 500);
     </script>
 </body>
 </html>
